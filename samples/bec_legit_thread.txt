@@ -1,0 +1,18 @@
+From: Sarah Chen <sarah.chen@acmecorp.com>
+Reply-To: sarah.chen@acmecorp.com
+To: finance@acmecorp.com
+Subject: Re: Q3 budget review
+Date: Fri, 20 Nov 2026 09:00:00 +0000
+In-Reply-To: <msg-001@acmecorp.com>
+References: <msg-001@acmecorp.com>
+Received-SPF: pass (domain acmecorp.com designates 192.0.2.10 as permitted sender)
+Authentication-Results: mx.example.com; spf=pass; dkim=pass; dmarc=pass
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hi team,
+
+Please review the Q3 budget summary and the updated figures for the quarter. I will share the details in the meeting and we can discuss the plan for the next quarter. Thanks for the work on the budget and please let me know if you have any questions about the figures.
+
+Best regards,
+Sarah

@@ -1,0 +1,15 @@
+# PhishLens v2 kit samples — 12 kit-style URLs.
+# Each is a synthetic example of a known phishing-kit structure;
+# do not visit them. Expected: v2 kit score >= 60 for most/all.
+https://paypa1.com/login/verify/account
+https://paypal-secure-login.xyz/verify/account
+https://www.paypal.com.verify-account.xyz/login
+https://xn--pypal-4ve.com/login/verify/account
+https://microsoft365-login-secure.top/auth/login
+https://outlook-verify.office365-secure.xyz/common/oauth2/login
+https://wallet-seed-phrase.xyz/login/verify
+https://metamask-restore-wallet.top/import/restore
+https://amazon-payment-update.xyz/billing/invoice
+https://apple-id-verify-secure.xyz/signin/confirm
+https://netflix-account-suspended.xyz/login/update
+https://google-docs-share.xyz/document/view

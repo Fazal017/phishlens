@@ -1,0 +1,20 @@
+From: "Sarah Chen, CEO" <sarah.chen@acmecorp-secure-payments.com>
+Reply-To: sarah.chen@acmecorp-secure-payments.com
+To: finance@acmecorp.com
+Subject: Re: Urgent confidential wire transfer - act today
+Date: Fri, 20 Nov 2026 10:02:00 +0000
+In-Reply-To: <msg-999@evil-mail.example>
+References: <msg-001@acmecorp.com>
+Received-SPF: fail (domain acmecorp-secure-payments.com does not designate 185.220.101.45 as permitted sender)
+Authentication-Results: mx.example.com; spf=fail; dkim=fail; dmarc=fail
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Finance team,
+
+This is the CEO. I need an urgent wire transfer today. This is confidential, do not discuss it with anyone. Transfer the funds to the new bank account immediately. The invoice payment must go out before end of day. I am in a board meeting and cannot take calls.
+
+Send the payment now. Wire transfer, bank details attached. Act now.
+
+Sarah Chen
+Chief Executive Officer

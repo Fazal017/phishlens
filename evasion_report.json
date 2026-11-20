@@ -1,0 +1,153 @@
+{
+  "base_url": "https://paypa1.com/login/verify/account",
+  "threshold": 60,
+  "total": 10,
+  "caught": 10,
+  "pass_rate": 1.0,
+  "passed": true,
+  "cases": [
+    {
+      "variant": "legit-word-padding",
+      "url": "https://paypa1.com/login/verify/account?source=official-help-support",
+      "score": 100,
+      "risk": "Critical",
+      "caught": true,
+      "rules": [
+        "URL-LOOKALIKE-DOMAIN",
+        "SQ-PHONETIC",
+        "KIT-CRED-HARVEST",
+        "URL-SUSPICIOUS-KEYWORDS"
+      ]
+    },
+    {
+      "variant": "shortener-redirect",
+      "url": "https://bit.ly/paypal-login-verify-secure?redirect=https://paypa1.com/login",
+      "score": 100,
+      "risk": "Critical",
+      "caught": true,
+      "rules": [
+        "URL-LOOKALIKE-DOMAIN",
+        "SQ-PHONETIC",
+        "URL-SHORTENER",
+        "KIT-CRED-HARVEST",
+        "V2-REDIRECT-TARGET",
+        "URL-BRAND-IN-PATH",
+        "URL-SUSPICIOUS-KEYWORDS",
+        "URL-REDIRECT-PARAM"
+      ]
+    },
+    {
+      "variant": "homoglyph-punycode",
+      "url": "https://xn--pypal-4ve.com/login/verify/account",
+      "score": 100,
+      "risk": "Critical",
+      "caught": true,
+      "rules": [
+        "URL-PUNYCODE",
+        "KIT-CRED-HARVEST",
+        "URL-SUSPICIOUS-KEYWORDS",
+        "URL-HIGH-ENTROPY",
+        "URL-MANY-HYPHENS"
+      ]
+    },
+    {
+      "variant": "split-brand-subdomains",
+      "url": "https://www.paypal.com.verify-account.xyz/login",
+      "score": 100,
+      "risk": "Critical",
+      "caught": true,
+      "rules": [
+        "URL-BRAND-IN-SUBDOMAIN",
+        "KIT-CRED-HARVEST",
+        "URL-MANY-SUBDOMAINS",
+        "URL-SUSPICIOUS-KEYWORDS",
+        "URL-SUSPICIOUS-TLD",
+        "URL-HIGH-ENTROPY"
+      ]
+    },
+    {
+      "variant": "at-sign-decoy",
+      "url": "https://paypal.com@paypa1.com/login/verify/account",
+      "score": 100,
+      "risk": "Critical",
+      "caught": true,
+      "rules": [
+        "URL-LOOKALIKE-DOMAIN",
+        "SQ-PHONETIC",
+        "KIT-CRED-HARVEST",
+        "URL-AT-SIGN",
+        "URL-SUSPICIOUS-KEYWORDS"
+      ]
+    },
+    {
+      "variant": "hyphen-stuffing",
+      "url": "https://paypal-secure-login-verify.top/account/verify",
+      "score": 100,
+      "risk": "Critical",
+      "caught": true,
+      "rules": [
+        "URL-BRAND-IN-DOMAIN",
+        "SQ-EMBEDDED-BRAND",
+        "KIT-CRED-HARVEST",
+        "URL-SUSPICIOUS-KEYWORDS",
+        "URL-SUSPICIOUS-TLD",
+        "URL-MANY-HYPHENS"
+      ]
+    },
+    {
+      "variant": "redirect-param",
+      "url": "https://login-helpdesk.example.org/redirect?next=https://paypa1.com/login",
+      "score": 100,
+      "risk": "Critical",
+      "caught": true,
+      "rules": [
+        "URL-LOOKALIKE-DOMAIN",
+        "SQ-PHONETIC",
+        "KIT-CRED-HARVEST",
+        "V2-REDIRECT-TARGET",
+        "URL-REDIRECT-PARAM",
+        "URL-SUSPICIOUS-KEYWORDS"
+      ]
+    },
+    {
+      "variant": "http-long-path",
+      "url": "http://paypa1.com/login/verify/account/security/update/confirm/1234567890",
+      "score": 100,
+      "risk": "Critical",
+      "caught": true,
+      "rules": [
+        "URL-LOOKALIKE-DOMAIN",
+        "SQ-PHONETIC",
+        "KIT-CRED-HARVEST",
+        "URL-SUSPICIOUS-KEYWORDS",
+        "URL-NO-HTTPS"
+      ]
+    },
+    {
+      "variant": "vowel-swap",
+      "url": "https://paypel.com/login/verify/account",
+      "score": 100,
+      "risk": "Critical",
+      "caught": true,
+      "rules": [
+        "URL-LOOKALIKE-DOMAIN",
+        "SQ-EDIT-1",
+        "KIT-CRED-HARVEST",
+        "URL-SUSPICIOUS-KEYWORDS"
+      ]
+    },
+    {
+      "variant": "keyboard-typo",
+      "url": "https://paypak.com/login/verify/account",
+      "score": 100,
+      "risk": "Critical",
+      "caught": true,
+      "rules": [
+        "URL-LOOKALIKE-DOMAIN",
+        "SQ-EDIT-1",
+        "KIT-CRED-HARVEST",
+        "URL-SUSPICIOUS-KEYWORDS"
+      ]
+    }
+  ]
+}
