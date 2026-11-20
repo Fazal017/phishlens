@@ -1,0 +1,22 @@
+From: "PayPal Support" <support@paypal-secure-alert.com>
+Reply-To: paypal.helpdesk.2026@gmail.com
+To: victim@example.com
+Subject: URGENT: Your account will be suspended in 24 hours - verify now
+Date: Fri, 20 Nov 2026 09:14:00 +0000
+Received-SPF: fail (domain paypal-secure-alert.com does not designate 185.220.101.45 as permitted sender)
+Authentication-Results: mx.example.com; spf=fail; dkim=fail; dmarc=fail
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Dear Customer,
+
+We detected unusual activity on your PayPal account. Your account will be
+suspended within 24 hours unless you verify your identity immediately.
+
+Verify now: https://www.paypal.com.verify-account.xyz/login
+
+Alternatively, scan the QR code attached to this email to verify your account.
+
+Act now to avoid losing access to your funds.
+
+PayPal Security Team

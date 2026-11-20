@@ -1,0 +1,19 @@
+# PhishLens sample URLs — one per line, # = comment.
+# First 8 are phishing-like (expected score > 60), last 7 are legitimate
+# (expected score < 30). These are synthetic examples for testing the
+# heuristics; do not visit them.
+http://paypal-secure-login.xyz/verify/account
+https://paypa1.com/login/verify/account
+https://www.paypal.com.verify-account.xyz/login
+http://185.220.101.45/secure/paypal/verify
+https://xn--pypal-4ve.com/login/verify/account
+https://bit.ly/paypal-login-verify-secure
+https://google-support-login.top/account@verify
+https://microsoft.com@evil-login.ru/update
+https://www.paypal.com/signin
+https://www.google.com/
+https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook
+https://www.amazon.com/
+https://www.binance.com/en
+https://github.com/
+https://www.wikipedia.org/

@@ -1,0 +1,21 @@
+From: PayPal <noreply@paypal.com>
+Reply-To: noreply@paypal.com
+To: customer@example.com
+Subject: Your monthly statement is ready
+Date: Fri, 20 Nov 2026 09:00:00 +0000
+Received-SPF: pass (domain paypal.com designates 173.0.84.1 as permitted sender)
+Authentication-Results: mx.example.com; spf=pass; dkim=pass; dmarc=pass
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hello,
+
+Your monthly PayPal statement for November 2026 is ready. You can review
+your recent activity by signing in to your account:
+
+https://www.paypal.com/signin
+
+If you have any questions, visit our Help Centre from the PayPal app.
+
+Thanks,
+PayPal

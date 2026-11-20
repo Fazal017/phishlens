@@ -1,0 +1,4 @@
+# PhishLens has no third-party dependencies.
+# Python 3.8+ standard library only: argparse, email, ipaddress,
+# json, math, re, urllib.parse, dataclasses, pathlib.
+# Nothing to install.

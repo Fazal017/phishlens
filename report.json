@@ -1,0 +1,457 @@
+[
+  {
+    "target": "http://paypal-secure-login.xyz/verify/account",
+    "kind": "url",
+    "score": 82,
+    "risk": "Critical",
+    "verdict": "Likely phishing \u2014 do not visit / do not trust",
+    "findings": [
+      {
+        "rule_id": "URL-BRAND-IN-DOMAIN",
+        "severity": "high",
+        "weight": 35,
+        "title": "Brand 'paypal' embedded in a non-brand domain",
+        "explanation": "'paypal-secure-login' contains the brand name but the site is not paypal's \u2014 e.g. paypal-secure.com is not PayPal.",
+        "remediation": "A brand name inside a longer domain name does not make it the brand's site."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-KEYWORDS",
+        "severity": "medium",
+        "weight": 15,
+        "title": "Suspicious keywords in URL: account, login, secure, verify",
+        "explanation": "login / verify / secure / account language in the URL is typical of credential-harvesting pages.",
+        "remediation": "Go to the service's official site instead of following a 'verify your account' link."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-TLD",
+        "severity": "medium",
+        "weight": 12,
+        "title": "Suspicious TLD: .xyz",
+        "explanation": ".xyz domains are cheap/free and disproportionately used for phishing kits. A legit site can use one, so this is only a supporting signal.",
+        "remediation": "Combine with the other findings; a .xyz login page for a major brand is a red flag."
+      },
+      {
+        "rule_id": "URL-NO-HTTPS",
+        "severity": "medium",
+        "weight": 10,
+        "title": "Plain HTTP, no TLS encryption",
+        "explanation": "The connection is not encrypted, so credentials can be intercepted. Most major sites enforce HTTPS everywhere now.",
+        "remediation": "Do not enter credentials on an http:// page."
+      },
+      {
+        "rule_id": "URL-HIGH-ENTROPY",
+        "severity": "medium",
+        "weight": 10,
+        "title": "High-entropy host/path (4.27)",
+        "explanation": "Random-looking strings in the host or path are typical of auto-generated phishing domains and encoded payloads.",
+        "remediation": "A real brand domain is readable; random strings are not."
+      }
+    ]
+  },
+  {
+    "target": "https://paypa1.com/login/verify/account",
+    "kind": "url",
+    "score": 65,
+    "risk": "High",
+    "verdict": "Likely phishing \u2014 do not visit / do not trust",
+    "findings": [
+      {
+        "rule_id": "URL-LOOKALIKE-DOMAIN",
+        "severity": "critical",
+        "weight": 50,
+        "title": "Lookalike domain: 'paypa1' mimics 'paypal' with substituted characters",
+        "explanation": "'paypa1' only reads as 'paypal' after undoing a character substitution (e.g. 1 for l, 0 for o). The real domain is not the brand's.",
+        "remediation": "Type the brand's domain yourself; do not trust a near-miss spelling."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-KEYWORDS",
+        "severity": "medium",
+        "weight": 15,
+        "title": "Suspicious keywords in URL: account, login, verify",
+        "explanation": "login / verify / secure / account language in the URL is typical of credential-harvesting pages.",
+        "remediation": "Go to the service's official site instead of following a 'verify your account' link."
+      }
+    ]
+  },
+  {
+    "target": "https://www.paypal.com.verify-account.xyz/login",
+    "kind": "url",
+    "score": 97,
+    "risk": "Critical",
+    "verdict": "Likely phishing \u2014 do not visit / do not trust",
+    "findings": [
+      {
+        "rule_id": "URL-BRAND-IN-SUBDOMAIN",
+        "severity": "critical",
+        "weight": 45,
+        "title": "Brand 'paypal' in a subdomain of a different domain",
+        "explanation": "The address starts with paypal but the registrable domain is verify-account.xyz \u2014 the brand does not own this site. This is the single most common phishing pattern of 2026.",
+        "remediation": "Only trust the brand on its own domain. Navigate there yourself; never log in from a lookalike."
+      },
+      {
+        "rule_id": "URL-MANY-SUBDOMAINS",
+        "severity": "high",
+        "weight": 15,
+        "title": "5 domain labels \u2014 excessive subdomains",
+        "explanation": "Phishing pages stack subdomains (brand.com.attacker.tld) to make the address look familiar at a glance.",
+        "remediation": "Read the registrable domain (last two labels) \u2014 that is who actually owns the site."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-KEYWORDS",
+        "severity": "medium",
+        "weight": 15,
+        "title": "Suspicious keywords in URL: account, login, verify",
+        "explanation": "login / verify / secure / account language in the URL is typical of credential-harvesting pages.",
+        "remediation": "Go to the service's official site instead of following a 'verify your account' link."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-TLD",
+        "severity": "medium",
+        "weight": 12,
+        "title": "Suspicious TLD: .xyz",
+        "explanation": ".xyz domains are cheap/free and disproportionately used for phishing kits. A legit site can use one, so this is only a supporting signal.",
+        "remediation": "Combine with the other findings; a .xyz login page for a major brand is a red flag."
+      },
+      {
+        "rule_id": "URL-HIGH-ENTROPY",
+        "severity": "medium",
+        "weight": 10,
+        "title": "High-entropy host/path (4.27)",
+        "explanation": "Random-looking strings in the host or path are typical of auto-generated phishing domains and encoded payloads.",
+        "remediation": "A real brand domain is readable; random strings are not."
+      }
+    ]
+  },
+  {
+    "target": "http://185.220.101.45/secure/paypal/verify",
+    "kind": "url",
+    "score": 93,
+    "risk": "Critical",
+    "verdict": "Likely phishing \u2014 do not visit / do not trust",
+    "findings": [
+      {
+        "rule_id": "URL-IP-HOST",
+        "severity": "critical",
+        "weight": 50,
+        "title": "IP address used instead of a domain name",
+        "explanation": "Legitimate brands use named domains; phishing kits often hide behind a raw IP (185.220.101.45) so there is no brand to check.",
+        "remediation": "Never log in via a bare-IP link. Type the brand's real domain yourself or use a bookmark."
+      },
+      {
+        "rule_id": "URL-BRAND-IN-PATH",
+        "severity": "medium",
+        "weight": 20,
+        "title": "Brand 'paypal' in the path of a non-brand site",
+        "explanation": "The path mentions paypal but the site (185.220.101.45) is not the brand's. Attackers use this to make a link look official in a message preview.",
+        "remediation": "Judge a link by its host, never by its path."
+      },
+      {
+        "rule_id": "URL-NO-HTTPS",
+        "severity": "medium",
+        "weight": 10,
+        "title": "Plain HTTP, no TLS encryption",
+        "explanation": "The connection is not encrypted, so credentials can be intercepted. Most major sites enforce HTTPS everywhere now.",
+        "remediation": "Do not enter credentials on an http:// page."
+      },
+      {
+        "rule_id": "URL-MANY-SUBDOMAINS",
+        "severity": "medium",
+        "weight": 8,
+        "title": "4 domain labels \u2014 many subdomains",
+        "explanation": "More subdomains than a normal brand login page needs; often used to bury the real domain.",
+        "remediation": "Check the registrable domain, not the leftmost labels."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-KEYWORDS",
+        "severity": "low",
+        "weight": 5,
+        "title": "Suspicious keyword in URL: secure, verify",
+        "explanation": "A credential-related word in the URL, on a host that is not the brand's own domain.",
+        "remediation": "Verify the host before entering any credentials."
+      }
+    ]
+  },
+  {
+    "target": "https://xn--pypal-4ve.com/login/verify/account",
+    "kind": "url",
+    "score": 80,
+    "risk": "Critical",
+    "verdict": "Likely phishing \u2014 do not visit / do not trust",
+    "findings": [
+      {
+        "rule_id": "URL-PUNYCODE",
+        "severity": "critical",
+        "weight": 50,
+        "title": "Punycode (xn--) domain \u2014 possible IDN homograph attack",
+        "explanation": "The domain is encoded internationalised text. Attackers use Cyrillic/Greek letters that look identical to Latin ones (e.g. 'p\u0430ypal' with a Cyrillic '\u0430') to fake a brand.",
+        "remediation": "Copy the domain into a punycode decoder or check the certificate; never trust an xn-- login page at face value."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-KEYWORDS",
+        "severity": "medium",
+        "weight": 15,
+        "title": "Suspicious keywords in URL: account, login, verify",
+        "explanation": "login / verify / secure / account language in the URL is typical of credential-harvesting pages.",
+        "remediation": "Go to the service's official site instead of following a 'verify your account' link."
+      },
+      {
+        "rule_id": "URL-HIGH-ENTROPY",
+        "severity": "medium",
+        "weight": 10,
+        "title": "High-entropy host/path (4.25)",
+        "explanation": "Random-looking strings in the host or path are typical of auto-generated phishing domains and encoded payloads.",
+        "remediation": "A real brand domain is readable; random strings are not."
+      },
+      {
+        "rule_id": "URL-MANY-HYPHENS",
+        "severity": "low",
+        "weight": 5,
+        "title": "3 hyphens in the domain",
+        "explanation": "Hyphen-stuffed domains (secure-paypal-login-verify.com) are a cheap way to stuff brand + urgency words into a host.",
+        "remediation": "Prefer the brand's short, clean domain."
+      }
+    ]
+  },
+  {
+    "target": "https://bit.ly/paypal-login-verify-secure",
+    "kind": "url",
+    "score": 65,
+    "risk": "High",
+    "verdict": "Likely phishing \u2014 do not visit / do not trust",
+    "findings": [
+      {
+        "rule_id": "URL-SHORTENER",
+        "severity": "high",
+        "weight": 30,
+        "title": "Link shortener hides the real destination",
+        "explanation": "bit.ly hides where the link really goes, so the domain checks below cannot see the true target. A shortener alone is not proof of phishing \u2014 but a shortened *login* link is, because a real brand never needs to hide its own login page.",
+        "remediation": "Expand the short link (e.g. with a URL expander) and analyse the destination before clicking."
+      },
+      {
+        "rule_id": "URL-BRAND-IN-PATH",
+        "severity": "medium",
+        "weight": 20,
+        "title": "Brand 'paypal' in the path of a non-brand site",
+        "explanation": "The path mentions paypal but the site (bit.ly) is not the brand's. Attackers use this to make a link look official in a message preview.",
+        "remediation": "Judge a link by its host, never by its path."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-KEYWORDS",
+        "severity": "medium",
+        "weight": 15,
+        "title": "Suspicious keywords in URL: login, secure, verify",
+        "explanation": "login / verify / secure / account language in the URL is typical of credential-harvesting pages.",
+        "remediation": "Go to the service's official site instead of following a 'verify your account' link."
+      }
+    ]
+  },
+  {
+    "target": "https://google-support-login.top/account@verify",
+    "kind": "url",
+    "score": 100,
+    "risk": "Critical",
+    "verdict": "Likely phishing \u2014 do not visit / do not trust",
+    "findings": [
+      {
+        "rule_id": "URL-BRAND-BEFORE-AT",
+        "severity": "critical",
+        "weight": 35,
+        "title": "Brand 'google' used as decoy before '@'",
+        "explanation": "The part before '@' pretends to be google, but the real host is google-support-login.top. The brand text is there only to fool a quick glance.",
+        "remediation": "Ignore everything before '@' and judge the link by the host after it."
+      },
+      {
+        "rule_id": "URL-BRAND-IN-DOMAIN",
+        "severity": "high",
+        "weight": 35,
+        "title": "Brand 'google' embedded in a non-brand domain",
+        "explanation": "'google-support-login' contains the brand name but the site is not google's \u2014 e.g. paypal-secure.com is not PayPal.",
+        "remediation": "A brand name inside a longer domain name does not make it the brand's site."
+      },
+      {
+        "rule_id": "URL-AT-SIGN",
+        "severity": "high",
+        "weight": 25,
+        "title": "'@' in the URL hides the real host",
+        "explanation": "In https://brand.com@evil.com/ the browser goes to evil.com; everything before '@' is just a username decoy.",
+        "remediation": "Read the host *after* the last '@' \u2014 that is where the browser actually goes."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-KEYWORDS",
+        "severity": "medium",
+        "weight": 15,
+        "title": "Suspicious keywords in URL: account, login, verify",
+        "explanation": "login / verify / secure / account language in the URL is typical of credential-harvesting pages.",
+        "remediation": "Go to the service's official site instead of following a 'verify your account' link."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-TLD",
+        "severity": "medium",
+        "weight": 12,
+        "title": "Suspicious TLD: .top",
+        "explanation": ".top domains are cheap/free and disproportionately used for phishing kits. A legit site can use one, so this is only a supporting signal.",
+        "remediation": "Combine with the other findings; a .xyz login page for a major brand is a red flag."
+      }
+    ]
+  },
+  {
+    "target": "https://microsoft.com@evil-login.ru/update",
+    "kind": "url",
+    "score": 77,
+    "risk": "High",
+    "verdict": "Likely phishing \u2014 do not visit / do not trust",
+    "findings": [
+      {
+        "rule_id": "URL-BRAND-BEFORE-AT",
+        "severity": "critical",
+        "weight": 35,
+        "title": "Brand 'microsoft' used as decoy before '@'",
+        "explanation": "The part before '@' pretends to be microsoft, but the real host is evil-login.ru. The brand text is there only to fool a quick glance.",
+        "remediation": "Ignore everything before '@' and judge the link by the host after it."
+      },
+      {
+        "rule_id": "URL-AT-SIGN",
+        "severity": "high",
+        "weight": 25,
+        "title": "'@' in the URL hides the real host",
+        "explanation": "In https://brand.com@evil.com/ the browser goes to evil.com; everything before '@' is just a username decoy.",
+        "remediation": "Read the host *after* the last '@' \u2014 that is where the browser actually goes."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-TLD",
+        "severity": "medium",
+        "weight": 12,
+        "title": "Suspicious TLD: .ru",
+        "explanation": ".ru domains are cheap/free and disproportionately used for phishing kits. A legit site can use one, so this is only a supporting signal.",
+        "remediation": "Combine with the other findings; a .xyz login page for a major brand is a red flag."
+      },
+      {
+        "rule_id": "URL-SUSPICIOUS-KEYWORDS",
+        "severity": "low",
+        "weight": 5,
+        "title": "Suspicious keyword in URL: login, update",
+        "explanation": "A credential-related word in the URL, on a host that is not the brand's own domain.",
+        "remediation": "Verify the host before entering any credentials."
+      }
+    ]
+  },
+  {
+    "target": "https://www.paypal.com/signin",
+    "kind": "url",
+    "score": 0,
+    "risk": "Low",
+    "verdict": "Looks legitimate on these heuristics \u2014 still stay alert",
+    "findings": [
+      {
+        "rule_id": "URL-CLEAN",
+        "severity": "info",
+        "weight": 0,
+        "title": "No phishing heuristics triggered",
+        "explanation": "Recognised structure, valid HTTPS, no lookalike, IP, punycode or subdomain abuse detected.",
+        "remediation": "No action needed \u2014 still check the sender before logging in."
+      }
+    ]
+  },
+  {
+    "target": "https://www.google.com/",
+    "kind": "url",
+    "score": 0,
+    "risk": "Low",
+    "verdict": "Looks legitimate on these heuristics \u2014 still stay alert",
+    "findings": [
+      {
+        "rule_id": "URL-CLEAN",
+        "severity": "info",
+        "weight": 0,
+        "title": "No phishing heuristics triggered",
+        "explanation": "Recognised structure, valid HTTPS, no lookalike, IP, punycode or subdomain abuse detected.",
+        "remediation": "No action needed \u2014 still check the sender before logging in."
+      }
+    ]
+  },
+  {
+    "target": "https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook",
+    "kind": "url",
+    "score": 5,
+    "risk": "Low",
+    "verdict": "Looks legitimate on these heuristics \u2014 still stay alert",
+    "findings": [
+      {
+        "rule_id": "URL-LONG",
+        "severity": "low",
+        "weight": 5,
+        "title": "Long URL (99 chars)",
+        "explanation": "Longer than a typical brand login link.",
+        "remediation": "Check the host carefully before proceeding."
+      }
+    ]
+  },
+  {
+    "target": "https://www.amazon.com/",
+    "kind": "url",
+    "score": 0,
+    "risk": "Low",
+    "verdict": "Looks legitimate on these heuristics \u2014 still stay alert",
+    "findings": [
+      {
+        "rule_id": "URL-CLEAN",
+        "severity": "info",
+        "weight": 0,
+        "title": "No phishing heuristics triggered",
+        "explanation": "Recognised structure, valid HTTPS, no lookalike, IP, punycode or subdomain abuse detected.",
+        "remediation": "No action needed \u2014 still check the sender before logging in."
+      }
+    ]
+  },
+  {
+    "target": "https://www.binance.com/en",
+    "kind": "url",
+    "score": 0,
+    "risk": "Low",
+    "verdict": "Looks legitimate on these heuristics \u2014 still stay alert",
+    "findings": [
+      {
+        "rule_id": "URL-CLEAN",
+        "severity": "info",
+        "weight": 0,
+        "title": "No phishing heuristics triggered",
+        "explanation": "Recognised structure, valid HTTPS, no lookalike, IP, punycode or subdomain abuse detected.",
+        "remediation": "No action needed \u2014 still check the sender before logging in."
+      }
+    ]
+  },
+  {
+    "target": "https://github.com/",
+    "kind": "url",
+    "score": 0,
+    "risk": "Low",
+    "verdict": "Looks legitimate on these heuristics \u2014 still stay alert",
+    "findings": [
+      {
+        "rule_id": "URL-CLEAN",
+        "severity": "info",
+        "weight": 0,
+        "title": "No phishing heuristics triggered",
+        "explanation": "Recognised structure, valid HTTPS, no lookalike, IP, punycode or subdomain abuse detected.",
+        "remediation": "No action needed \u2014 still check the sender before logging in."
+      }
+    ]
+  },
+  {
+    "target": "https://www.wikipedia.org/",
+    "kind": "url",
+    "score": 0,
+    "risk": "Low",
+    "verdict": "Looks legitimate on these heuristics \u2014 still stay alert",
+    "findings": [
+      {
+        "rule_id": "URL-CLEAN",
+        "severity": "info",
+        "weight": 0,
+        "title": "No phishing heuristics triggered",
+        "explanation": "Recognised structure, valid HTTPS, no lookalike, IP, punycode or subdomain abuse detected.",
+        "remediation": "No action needed \u2014 still check the sender before logging in."
+      }
+    ]
+  }
+]
